@@ -19,6 +19,7 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [disabled, setDisabled] = useState(false)
   const [gameWon, setGameWon] = useState(false)
+  
 
   const [bestMoves, setBestMoves] = useKV<number | null>('best-moves', null)
   const [bestTime, setBestTime] = useKV<number | null>('best-time', null)
@@ -38,6 +39,7 @@ function App() {
   }, [isPlaying, gameWon])
 
   useEffect(() => {
+    console.log("lol")
     if (matchedCards.length === cards.length && cards.length > 0) {
       setGameWon(true)
       setIsPlaying(false)
