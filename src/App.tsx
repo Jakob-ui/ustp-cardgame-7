@@ -39,7 +39,6 @@ function App() {
   }, [isPlaying, gameWon])
 
   useEffect(() => {
-    console.log("lol")
     if (matchedCards.length === cards.length && cards.length > 0) {
       setGameWon(true)
       setIsPlaying(false)
