@@ -187,7 +187,7 @@ function App() {
               <CardComponent className="p-6 bg-accent/20 border-accent">
                 <h2 className="text-2xl font-bold mb-2">Congratulations! 🎉</h2>
                 <p className="text-muted-foreground mb-4">
-                  You completed the game in {moves} moves and {formatTime(time)}!
+                  You completed the game in {moves} moves and {formatTime(time)}, nice!
                 </p>
                 <Button onClick={handleRestart} size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                   <ArrowClockwise size={20} weight="bold" className="mr-2" />
