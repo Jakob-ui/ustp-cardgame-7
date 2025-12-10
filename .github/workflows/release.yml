@@ -1,0 +1,27 @@
+name: Create Release
+
+on:
+  push:
+    # Trigger this workflow when you push to release branches
+    branches:
+      - 'release/**'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          # This pulls the version number from the branch name (e.g., release/1.0.0 -> v1.0.0)
+          tag_name: v${{ github.ref_name }} 
+          name: Release v${{ github.ref_name }}
+          generate_release_notes: true
+          draft: false
+          prerelease: false
