@@ -1,3 +1,10 @@
+# Automatically enable GitHub auto-merge for Dependabot PRs.
+# Requirements: repository Settings -> Pull requests -> "Allow auto-merge" must be enabled.
+# This workflow uses pull_request_target so it runs in the context of the default branch and
+# can safely call the GitHub API to enable auto-merge for Dependabot PRs.
+
+name: Enable auto-merge for Dependabot PRs
+
 on:
   pull_request_target:
     types: [opened, reopened, synchronize, labeled]
