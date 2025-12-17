@@ -24,6 +24,8 @@ function App() {
   const [bestMoves, setBestMoves] = useKV<number | null>('best-moves', null)
   const [bestTime, setBestTime] = useKV<number | null>('best-time', null)
 
+  const x = "x"
+
   useEffect(() => {
     let interval: number | undefined
 
