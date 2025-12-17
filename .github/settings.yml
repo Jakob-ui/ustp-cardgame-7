@@ -82,7 +82,9 @@ milestones:
 # Collaborators: give specific users access to this repository.
 # See https://docs.github.com/en/rest/reference/repos#add-a-repository-collaborator for available options
 collaborators:
-  # - username: bkeepers
+   - jakob-ui: bkeepers
+   - dstudera: bkeepers
+   - ViktorHofer: bkeepers
   #   permission: push
   # - username: hubot
   #   permission: pull
